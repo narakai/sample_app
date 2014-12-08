@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+get 'users/new'
 
 root  'pages#home'
 get '/help' => 'pages#help'
 get '/contact' => 'pages#contact'
 get '/about' => 'pages#about'
 get '/signup' => 'users#new'
+
+resources :users
 
   # You can have the root of your site routed with "root"
   # The priority is based upon order of creation: first created -> highest priority.
